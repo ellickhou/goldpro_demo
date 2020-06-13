@@ -1,0 +1,11 @@
+Flask==1.0.2
+Flask-WTF==0.14.2
+requests==2.21.0
+geoip2==2.9.0
+PyMySQL==0.9.3
+SpeechRecognition==3.8.1
+gTTS==2.0.3
+pygame==1.9.2
+jieba==0.39
+PyAudio-0.2.11
+flask_wtf

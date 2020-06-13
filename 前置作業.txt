@@ -1,0 +1,43 @@
+*** 在 cmd 上將編碼預設為 utf-8 而不是 big-5 ***
+chcp 65001
+65001 是 utf-8 的代號
+ref: https://coder.tw/?p=7487
+
+*** IP 轉換成經緯度 ***
+ref: https://dev.maxmind.com/geoip/geoip2/geolite2/
+ref: https://github.com/maxmind/GeoIP2-python
+
+Windows 系統請使用 "系統管理員" 開啟 cmd
+避免權限不足無法安裝套件
+
+1. 安裝 Python 3.x
+到 python 官網上下載
+
+2. 安裝 pip (未來能安裝 python 套件的工具)
+easy_install pip
+
+3. 安裝 virtualenv 
+pip install virtualenv
+
+4. 以 virtualenv 建立虛擬環境並啟用虛擬環境
+virtualenv venv
+venv\scripts\activate
+
+5. 安裝 flask (網站 framework，以 Python 開發)
+pip install Flask
+
+6. 撰寫 fb_api.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, world!'
+
+7. 將 backend.py 檔案加進環境變數
+set FLASK_APP=server/backend.py
+
+8. 執行 Flask server
+flask run
+
+打開瀏覽器並輸入 localhost:5000 即可看到 "Hello, world!"
